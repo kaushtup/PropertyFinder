@@ -1,0 +1,154 @@
+﻿@{ 
+    ViewBag.Title = "Tenant Available House";
+    Layout = "~/Areas/Tenant/Views/Shared/_Layout.cshtml"; 
+}
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<main id="main">
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="title-single-box">
+                        <h1 class="title-single">Available Properties</h1>
+                        <span class="color-text-a">Welcome @ViewData["UserName"] </span>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <form asp-action="Favourites" method="get">
+                                    <button type="submit" class="btn btn-success">
+                                        Favourites
+                                    </button>
+                                </form>
+                            </li>
+
+                            <li class="breadcrumb-item">
+                                <form asp-action="ViewMessages" method="get" style="margin:0px 5px 0px 15px">
+                                    <button type="submit" class="btn btn-primary">
+
+                                        Messages
+
+                                        @if (ViewData["MessageCount"].ToString() != "0")
+                                        {
+                                            <span class="badge badge-danger">@ViewData["MessageCount"]</span>
+                                        }
+                                    </button>
+                                </form>
+                            </li>
+
+                            <li>
+                                <form asp-action="Logout" method="post">
+                                    <button type="submit" class="btn btn-danger">
+                                        Logout
+                                    </button>
+                                </form>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Intro Single-->
+    <!-- ======= Property Grid ======= -->
+    <section class="property-grid grid">
+        <div class="container" ng-app="myApp">
+            <div class="row" ng-controller="myCtrl" ng-init="GetAllData()">
+                <div class="col-sm-12">
+                    <div class="grid-option">
+
+                        <h4>
+                            <span class="badge badge-warning" style="margin: 0px 0px 0px 0px">Filter</span>
+
+                            Location
+                            <select class="custom-select" ng-model="dropdownLocationValue" ng-change="dropdownLocation()">
+                                <option value="0" selected>All</option>
+                                <option value="1">Within 50 mile</option>
+                                <option value="2">Within 100 mile</option>
+                                <option value="3">Within 150 mile</option>
+                                <option value="4">Within 200 mile</option>
+                            </select>
+
+                            House Type
+                            <select class="custom-select" ng-model="dropdownValue" ng-change="dropdown()">
+                                <option value="0" selected>All</option>
+                                <option value="1">House</option>
+                                <option value="2">Apartment</option>
+                            </select>
+
+                            <select class="custom-select" ng-model="dropdownRentValue" ng-change="dropdownRentOrBuy()">
+                                <option value="0" selected>Rent/Buy</option>
+                                <option value="1">Rent</option>
+                                <option value="2">Buy</option>
+                            </select>
+
+                        </h4>
+
+                        <br />
+                        <br />
+
+                        <div>
+
+                            <input type="number" style="width:120px" ng-model="initialValue" ng-change="initialValFunction()" min="0" placeholder="Initial Value" />
+                            <input type="number" style="width:120px" ng-model="finalValue" min="{{minValue}}" placeholder="Final Value" />
+
+
+                            <button type="button" class="btn-primary" ng-click="costFilter()">Apply Cost Filter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" ng-repeat="x in houseInfo">
+                    <br />
+                    <br />
+
+                    <div class="card-box-a card-shadow" style="height:250px; width:350px">
+                        <div class="img-box-a">
+                            <img src="~/images/{{x.photo[0].image}}" alt="" class="img-a img-fluid">
+                        </div>
+
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">
+                                            {{x.title}}
+                                        </a>
+                                        <span style="margin-left: 8em" ng-if="x.toggle"><i class="heart fa fa-heart" ng-click="clickFavourites($index)"></i></span>
+                                        <span style="margin-left: 8em" ng-if="!x.toggle"><i class="heart fa fa-heart-o" ng-click="clickFavourites($index)"></i></span>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | £{{x.cost}}</span>
+                                    </div>
+                                    <a href="ViewHouse/{{x.id}}" class="link-a">
+                                        Click here to view
+                                        @*<span class="ion-ios-arrow-forward"></span>*@
+                                    </a>
+                                </div>
+
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Located at:</h4>
+                                            <span>{{x.addressInfoName}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Property Grid Single-->
+</main><!-- End #main -->
+
+<script src="~/angularjs/angular.min.js"></script>
+<script src="~/angularjs/tenanthouse.js"></script>

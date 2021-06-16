@@ -1,0 +1,157 @@
+﻿
+@model PropertyFinder.Data.ViewModel.HouseDisplayViewModel
+
+
+@{
+    ViewBag.Title = "My House Details";
+    Layout = "~/Areas/Owner/Views/Shared/_Layout.cshtml";
+
+}
+
+<main id="main" ng-app="myApp">
+    <section class="intro-single" ng-controller="myCtrl" ng-init="GetAllData(@Newtonsoft.Json.JsonConvert.SerializeObject(Model), @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["AddressData"]), @Newtonsoft.Json.JsonConvert.SerializeObject(ViewData["HouseTypeData"]))">
+        <h2>Edit House</h2>
+        <div class="card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="my-auto">
+                            @*<form asp-action="EditHouse" method="post" enctype="multipart/form-data">*@
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Title"></label>
+                                <input asp-for="Title" type="text" ng-model="Title" class="form-control" placeholder="Enter your title" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Description"></label>
+                                <input asp-for="Description" type="text" ng-model="Description" class="form-control" placeholder="Enter your description" />
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Cost"></label>
+                                <input asp-for="Cost" type="number" ng-model="Cost" class="form-control" placeholder="Enter your cost" />
+                                <span asp-validation-for="Cost" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="NumberOfBedroom"></label>
+                                <input asp-for="NumberOfBedroom" type="number" ng-model="NumberOfBedroom" class="form-control" placeholder="Enter number of bedroom" />
+                                <span asp-validation-for="NumberOfBedroom" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="AvailableDate"></label>
+                                <input asp-for="AvailableDate" type="date" ng-model="AvailableDate" class="form-control" placeholder="Enter available date" />
+                                <span asp-validation-for="AvailableDate" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>What do you want to do?</label>
+
+                                <div class="col-md-4 mb-3">
+                                    <input type="radio" ng-model="radioVal" value="Buy">Buy
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <input type="radio" ng-model="radioVal" value="Rent">Rent
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Photo">Photo</label>
+                                <div class="custom-file">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                    <input name="Photo" id="fileUpload" class="custom-file-input" onchange="angular.element(this).scope().SelectFile(event)" @*id="customFile"*@ accept=".jpg, .png" type="file">
+                                </div>
+                                <span asp-validation-for="Photo" class="text-danger"></span>
+                            </div>
+
+                            <div class="preview clearfix">
+                                <div class="previewData clearfix" ng-repeat="data in previewData track by $index">
+                                    <img src={{data.src}}>
+                                    <div class="previewControls">
+                                        <button type="button" class="btn btn-danger" ng-click="removeImage(data)">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="previewData clearfix" ng-repeat="data in previewData1 track by $index">
+                                    <img ng-src="{{data.file}}" ng-show="data.file != null" alt="" />
+                                    <div class="previewControls">
+                                        <button type="button" class="btn btn-danger" ng-click="removeImage(data)">Delete</button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address</label>
+
+                                <select ng-model="selectedAddress" class="form-control">
+                                    <option ng-repeat="sel in addrData" ng-selected="selectedItemvalue == sel.Value" value="{{sel.Value}}">{{sel.Text}}</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Is it House or Apartment?</label>
+                                <select ng-model="selectedHouseType" class="form-control">
+                                    <option ng-repeat="x in houseData" ng-selected="selectedhouseItemvalue == x.Value" value="{{x.Value}}">{{x.Text}}</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="InsertData()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SuccessModal -->
+        <div id="messageModal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-success">
+                        <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{successMessage}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-success">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<div>
+    @Html.ActionLink("Back to Home", "Index")
+</div>
+
+
+<script src="~/angularjs/angular.min.js"></script>
+<script src="~/angularjs/EditHouse.js"></script>
+
+@{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+
+            if (fileName != "") {
+                //$(this).siblings(".custom-file-label").addClass("selected").html("File Selected");
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            }
+            //$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}
+

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PropertyFinder.Data.ViewModel.MessageViewModel>
+
+@{
+    ViewBag.Title = "My House Details";
+    Layout = "~/Areas/Tenant/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+    <section class="intro-single">
+        <h2>Messages</h2>
+
+        @foreach (var item in Model)
+        {
+            if (item.IsOwner == true)
+            {
+                <div class="card border-dark mb-3">
+                    <div class="card-header">@item.OwnerName (@item.OwnerEmail)</div>
+                    <div class="card-body text-dark">
+                        <h5 class="card-title">@item.Message</h5>
+                        <p class="card-text">@item.Date</p>
+                    </div>
+                      <div class="card-footer">
+                        <form asp-action="SendMessage" method="get">
+                            <input type="hidden" name="ownerid" value="@item.OwnerId" />
+
+                            <button type="submit" class="btn btn-success">
+                                Reply
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            }
+            else 
+            { 
+                <div class="card text-white bg-primary mb-3">
+                    
+                    <div class="card-header">
+                        @item.OwnerName
+                        (@item.OwnerEmail)
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Message</h5>
+                        <p class="card-text">@item.Date</p>
+                    </div>
+                </div>           
+            }
+
+         }
+    </section>
+</main>
+
+<div>
+    @Html.ActionLink("Back to Home", "Index")
+</div>

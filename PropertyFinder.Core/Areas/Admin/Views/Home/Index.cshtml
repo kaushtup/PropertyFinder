@@ -1,0 +1,202 @@
+﻿@{ 
+    ViewData["Title"] = "Admin Site";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; 
+}
+
+<div ng-app="myApp">
+    <div ng-controller="myCtrl" ng-init="GetAllData()" class="divList">
+        <div class="row">
+            <div class="container col-lg-12">
+                <div style="float:right">
+                    <!-- Button trigger modal -->
+                    <form asp-action="Get_Logout" method="post">
+                        <input type="submit" id="logout" class="btn btn-danger btn-sm" value="Logout">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <h3 style="color:green">Owner Info</h3>
+
+        <div class="container col-lg-12">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" id="Search" ng-model="searchText.firstname" placeholder="Search Owner" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:20%">
+                        Name
+                    </th>
+                    <th style="width:20%">
+                        Email
+                    </th>
+                    <th style="width:40%">
+                        Contact
+                    </th>
+                    <th style="width:20%">
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in userOwner | filter: searchText">
+                    <td style="width:20%">{{d.firstname}}</td>
+                    <td style="width:20%">{{d.email}}</td>
+                    <td style="width:40%">{{d.contact}}</td>
+                    <td style="width:20%">
+
+                        <button style="float:right; margin:0px 0px 0px 10px"  type="button" class="btn btn-danger btn-sm" ng-click="DeleteOwnerPopup(d.id,$index)">
+                            Delete
+                        </button>
+
+                        <form asp-action="View_UserHouse" method="get" style="float:right">
+                            <input type="hidden" value="{{d.id}}" name="id" />
+
+                            <button type="submit" id="userhouse" class="btn btn-primary btn-sm">View House</button>
+                        </form>
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3 style="color:red">Tenant Info</h3>
+
+        <div class="container col-lg-12">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" id="Search" ng-model="searchTenantText.firstname" placeholder="Search Tenant" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:20%">
+                        Name
+                    </th>
+                    <th style="width:20%">
+                        Email
+                    </th>
+                    <th style="width:40%">
+                        Contact
+                    </th>
+                    <th style="width:20%">
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in userTenant | filter: searchTenantText">
+                    <td style="width:20%">{{d.firstname}}</td>
+                    <td style="width:20%">{{d.email}}</td>
+                    <td style="width:40%">{{d.contact}}</td>
+                    <td style="width:20%">
+                        <button type="button" class="btn btn-danger btn-sm" ng-click="DeleteTenantPopup(d.id,$index)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- DeleteModal -->
+        <div id="deleteModal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure want to delete?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-success" ng-click="DeleteOwnerData()" id="btnDelete">Yes</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-danger">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="deleteTenantModal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure want to delete?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-success" ng-click="DeleteTenantData()" id="btnTenantDelete">Yes</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-danger">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SuccessModal -->
+        <div id="successModal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-success">
+                        <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{successMessage}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-success">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ErrorModal -->
+        <div id="errorModal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger">
+                        <h5 class="modal-title" id="exampleModalLabel">Error Message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{errorMessage}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-success">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="~/angularjs/angular.min.js"></script>
+<script src="~/angularjs/admin.js"></script>

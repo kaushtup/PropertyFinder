@@ -1,0 +1,45 @@
+﻿@model PropertyFinder.Data.Models.Message
+
+@{
+    ViewBag.Title = "Send Message";
+    Layout = "~/Areas/Tenant/Views/Shared/_Layout.cshtml"; }
+
+<h2>Message</h2>
+
+<main id="main">
+    <section class="intro-single">
+
+        <h2></h2>
+
+        <div class="card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="my-auto">
+                            <form asp-action="SendMessage" method="post">
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <input asp-for="OwnerId" type="hidden" class="form-control" value="@ViewData["OwnerId"]" />
+                                @*<input asp-for="TenantId" type="hidden" class="form-control" value="@ViewData["HouseId"]" />*@
+
+
+                                <div class="form-group">
+                                    <label asp-for="Messages"></label>
+                                    <textarea asp-for="Messages" type="text" class="form-control" rows="3" placeholder="Enter your message"></textarea>
+                                    <span asp-validation-for="Messages" class="text-danger"></span>
+                                </div>
+
+                                <input type="submit" id="SendMessage" class="btn btn-block btn-success" value="Send">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div>
+    @Html.ActionLink("Back to Home", "Index")
+</div>

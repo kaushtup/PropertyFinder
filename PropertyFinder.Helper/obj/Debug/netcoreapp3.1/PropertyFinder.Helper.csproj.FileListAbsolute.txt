@@ -1,0 +1,36 @@
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csprojAssemblyReference.cache
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfoInputs.cache
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfo.cs
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CoreCompileInputs.cache
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.deps.json
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CopyComplete
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.deps.json
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.deps.json
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csprojAssemblyReference.cache
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfoInputs.cache
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfo.cs
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CoreCompileInputs.cache
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CopyComplete
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb

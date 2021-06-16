@@ -1,0 +1,147 @@
+﻿@model PropertyFinder.Data.ViewModel.HouseInfoViewModel
+
+@{ ViewBag.Title = "Add House Details";
+
+                Layout = "~/Areas/Owner/Views/Shared/_Layout.cshtml";
+
+                var addressData = (SelectList)ViewData["AddressData"];
+                var houseTypeData = (SelectList)ViewData["HouseTypeData"]; 
+}
+
+    <main id="main">
+        <section class="intro-single">
+            <h2>Add House Details</h2>
+            <div class="card">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="my-auto">
+                                <form asp-action="AddNewHouse" method="post" enctype="multipart/form-data">
+
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="Title"></label>
+                                        <input asp-for="Title" type="text" class="form-control" placeholder="Enter your title" />
+                                        <span asp-validation-for="Title" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="Description"></label>
+                                        <textarea asp-for="Description" type="text" class="form-control" rows="3" placeholder="Enter your description"></textarea>
+                                        <span asp-validation-for="Description" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="Cost"></label>
+                                        <input asp-for="Cost" type="number" class="form-control" placeholder="Enter your cost" />
+                                        <span asp-validation-for="Cost" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="NumberOfBedroom"></label>
+                                        <input asp-for="NumberOfBedroom" type="number" class="form-control" placeholder="Enter number of bedroom" />
+                                        <span asp-validation-for="NumberOfBedroom" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label asp-for="AvailableDate"></label>
+                                        <input asp-for="AvailableDate" type="date" class="form-control" placeholder="Enter available date" />
+                                        <span asp-validation-for="AvailableDate" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Photo">Photo</label>
+                                        <div class="custom-file">
+                                            <input asp-for="Photo" class="custom-file-input" id="customFile" accept=".jpg, .png" multiple="multiple" type="file">
+                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                        </div>
+                                        <span asp-validation-for="Photo" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>What do you want to do?</label>
+
+                                        <div class="col-md-4 mb-3">
+                                            <input type="radio" name="rentStatus" value="Buy" checked="checked" />
+                                            <label>Buy</label>
+                                        </div>
+
+                                        <div class="col-md-4 mb-3">
+                                            <input type="radio" name="rentStatus" value="Rent" />
+                                            <label>Rent</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="Address">Address</label>
+                                        @Html.DropDownList("AddressInfoId", addressData, htmlAttributes: new { @class = "form-control" })
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="House Type">House Type</label>
+                                        @Html.DropDownList("HouseTypeId", houseTypeData, htmlAttributes: new { @class = "form-control" })
+                                    </div>
+
+                                    <input type="submit" id="register" class="btn btn-block" value="Add">
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="aModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="aModalLabel">Message</h4>
+            </div>
+            <div class="modal-body">
+                @ViewBag.Result
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@{ if (ViewBag.Result != null)
+    {
+
+        <script src="~/house-js/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ()
+        {
+            $("#popupModal").modal('show');
+    });
+        </script>
+ } 
+    }
+
+@{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+
+            if (fileName != "") {
+                $(this).siblings(".custom-file-label").addClass("selected").html("File Selected");
+            }
+            //$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script> 
+}
+
+
+

@@ -1,0 +1,27 @@
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.deps.json
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csprojAssemblyReference.cache
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfoInputs.cache
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfo.cs
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\mekos\source\repos\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.deps.json
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Lenovo\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.deps.json
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csprojAssemblyReference.cache
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfoInputs.cache
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfo.cs
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csproj.CoreCompileInputs.cache
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.pdb

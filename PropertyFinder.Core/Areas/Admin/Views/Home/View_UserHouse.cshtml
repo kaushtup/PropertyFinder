@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PropertyFinder.Data.ViewModel.HouseDisplayViewModel>
+
+@{
+    ViewData["Title"] = "Admin Site";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<div class="divList">
+
+    <h3>House Info</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="width:10%">
+                    Name
+                </th>
+                <th style="width:20%">
+                    Description
+                </th>
+                <th style="width:15%">
+                    Address
+                </th>
+                <th style="width:15%">
+                    Cost(£)
+                </th>
+                <th style="width:20%">
+                    Available Date
+                </th>
+                <th style="width:15%">
+                    House Type
+                </th>
+                <th style="width:5%">
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:10%">@item.Title</td>
+                    <td style="width:20%">@item.Description</td>
+                    <td style="width:15%">@item.AddressInfoName</td>
+                    <td style="width:15%">@item.Cost</td>
+                    <td style="width:20%">@item.AvailableDate</td>
+                    <td style="width:15%">@item.HouseTypeName</td>
+                    <td style="width:5%">
+
+                        <form asp-action="DeleteHouse" method="post">
+                            <input type="hidden" value="@item.Id" name="id" />
+                            <input type="hidden" value="@ViewData["UserId"]" name="userid" />
+                            <input type="submit" id="userhouse" class="btn btn-danger btn-sm" value="Delete House">
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>

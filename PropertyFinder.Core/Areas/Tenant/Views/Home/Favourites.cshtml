@@ -1,0 +1,85 @@
+﻿@{ 
+    ViewBag.Title = "Tenant Available House";
+    Layout = "~/Areas/Tenant/Views/Shared/_Layout.cshtml"; }
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<main id="main">
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="title-single-box">
+                        <h1 class="title-single">Favourites</h1>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/Tenant/Home/Index">Go Back</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Properties
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Intro Single-->
+    <!-- ======= Property Grid ======= -->
+    <section class="property-grid grid">
+        <div class="container" ng-app="myApp">
+            <div class="row" ng-controller="myCtrl" ng-init="GetAllData()">
+                <div class="col-md-4" ng-repeat="x in houseInfo">
+                    <br />
+                    <br />
+
+                    <div class="card-box-a card-shadow" style="height:250px; width:350px">
+                        <div class="img-box-a">
+                            <img src="~/images/{{x.photo[0].image}}" alt="" class="img-a img-fluid">
+                        </div>
+
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">
+                                            {{x.title}}
+                                            <span style="margin-left: 8em" ng-if="x.toggle"><i class="heart fa fa-heart"></i></span>
+
+                                        </a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | £{{x.cost}}</span>
+                                    </div>
+                                    <a href="ViewHouse/{{x.id}}" class="link-a">
+                                        Click here to view                                   </a>
+                                </div>
+
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Located at:</h4>
+                                            <span>{{x.addressInfoName}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Property Grid Single-->
+</main><!-- End #main -->
+
+<script src="~/angularjs/angular.min.js"></script>
+<script src="~/angularjs/favourites.js"></script>

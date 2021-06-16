@@ -1,0 +1,184 @@
+﻿@model PropertyFinder.Data.ViewModel.HouseDisplayViewModel
+
+@{ ViewBag.Title = "My House Details";
+    Layout = "~/Areas/Owner/Views/Shared/_Layout.cshtml"; }
+
+<main id="main">
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="title-single-box">
+                        <h1 class="title-single">@Model.Title</h1>
+                        <span class="color-text-a">@Model.AddressInfoName</span>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/Owner/Home/Index">Go Back</a>
+                            </li>
+                            @*<li class="breadcrumb-item active" aria-current="page">
+                                    Properties Grid
+                                </li>*@
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Intro Single-->
+    <!-- ======= Property Grid ======= -->
+    <section class="property-grid grid">
+        <div class="container my-4">
+            <!--Carousel Wrapper-->
+            <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+                <!--Indicators-->
+                <ol class="carousel-indicators" style="margin:0px 0px 20px 220px">
+                    @{ int i = 0, j = 0, k = 0; }
+                    @foreach (var item in Model.Photo)
+                    {
+                        if (i == 0)
+                        {
+                            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                        }
+                        else
+                        {
+                            <li data-target="#carousel-example-2" data-slide-to="@i"></li>
+                        }
+                        i++;
+                    }
+                </ol>
+                <!--/.Indicators-->
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox" style="width:50%">
+
+                    @foreach (var item in Model.Photo)
+                    {
+                        if (j == 0)
+                        {
+                            <div class="carousel-item active">
+                                <div class="view">
+                                    <img class="d-block w-100" src="~/images/@item.Image" alt="Slide-@item.Id">
+                                    <div class="mask rgba-black-light"></div>
+                                </div>
+
+                            </div> }
+                        else
+                        {
+                            <div class="carousel-item">
+                                <div class="view">
+                                    <img class="d-block w-100" src="~/images/@item.Image" alt="Slide-@item.Id">
+                                    <div class="mask rgba-black-light"></div>
+                                </div>
+                                @*<div class="carousel-caption">
+                                <h3 class="h3-responsive">Light mask</h3>
+                                <p>First text</p>
+                            </div>*@
+                            </div>}
+
+                        j++;
+                    }
+                </div>
+
+                <!--/.Slides-->
+                <!--Controls-->
+                <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next" style="margin:0px 0px 0px 350px">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <!--/.Controls-->
+            </div>
+            <!--/.Carousel Wrapper-->
+
+
+            <br />
+
+
+            <h3><span class="badge badge-primary">Description: @Model.Description </span></h3>
+            <br />
+
+            <h3><span class="badge badge-secondary">Cost: £@Model.Cost</span></h3>
+
+
+            <br />
+
+            <h3><span class="badge badge-warning">Available Date: @Model.AvailableDate</span></h3>
+
+            <br />
+
+            <h3><span class="badge badge-danger"> Number of bedroom: @Model.NumberOfBedroom</span></h3>
+
+
+            <br />
+
+            <h3><span class="badge badge-info"> Accomodation Type: @Model.HouseTypeName</span></h3>
+
+
+            <br />
+
+            @if (Model.IsRent)
+            {
+                <h3><span class="badge badge-dark"> Available For: Rent</span></h3>
+
+            }
+            else
+            {
+                <h3><span class="badge badge-dark"> Available For: Buy</span></h3>
+            }
+
+
+            @*<div class="container">*@
+            <div style="float:right">
+
+
+                <form asp-action="EditHouse" method="get" style="float:right">
+                    <input type="hidden" name="Id" value="@Model.Id" />
+                    <input type="hidden" name="Title" value="@Model.Title" />
+                    <input type="hidden" name="Description" value="@Model.Description" />
+
+                    <input type="hidden" name="HouseTypeId" value="@Model.HouseTypeId" />
+                    <input type="hidden" name="HouseTypeName" value="@Model.HouseTypeName" />
+
+                    <input type="hidden" name="AddressInfoId" value="@Model.AddressInfoId" />
+                    <input type="hidden" name="AddressInfoName" value="@Model.AddressInfoName" />
+
+                    <input type="hidden" name="Cost" value="@Model.Cost" />
+                    <input type="hidden" name="NumberOfBedroom" value="@Model.NumberOfBedroom" />
+
+                    <input type="hidden" name="AvailableDate" value="@Model.AvailableDate" />
+                    <input type="hidden" name="IsRent" value="@Model.IsRent" />
+
+
+                    @foreach (var item in Model.Photo)
+                    {
+                        <input type="hidden" name="Photo[@k].Id" value="@item.Id" />
+                        <input type="hidden" name="Photo[@k].Image" value="@item.Image" />
+
+                        k++;
+                    }
+
+                    <button type="submit" class="btn btn-info">Edit Property</button>
+                </form>
+
+                <form asp-action="DeleteHouse" method="post" style="float:right;margin:0px 10px 0px 0px">
+                    <input type="hidden" name="id" value="@Model.Id" />
+
+                    <button type="submit" class="btn btn-danger">Delete Property</button>
+                </form>
+            </div>
+
+            <br />
+            <br />
+        </div>
+            
+    </section>
+    <!-- End Property Grid Single-->
+
+</main><!-- End #main -->
+

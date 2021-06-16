@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>View House</title>
+
+    <!-- Favicons -->
+    <link href="~/house-img/favicon.png" rel="icon">
+    <link href="~/house-img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/house-css/bootstrap.css" rel="stylesheet" />
+    <link href="~/house-css/ionicons.min.css" rel="stylesheet">
+    <link href="~/house-css/animate.min.css" rel="stylesheet">
+    <link href="~/house-css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/house-css/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/house-css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <!-- ======= Header/Navbar ======= -->
+        <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+            <div class="container">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a class="navbar-brand text-brand" href="#">Property<span class="color-b">Finder</span></a>
+            </div>
+        </nav><!-- End Header/Navbar -->
+    </header>
+    <div class="container" style="min-height:600px">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-footer">
+                        <p class="copyright color-text-a">
+                            &copy; Copyright
+                            <span class="color-a">PropertyFinder</span> All Rights Reserved.
+                             
+                        </p>
+                    </div>
+                    <div>
+                        <span class="color-d">Email: admin@gmail.com</span> for Complaints.
+                    </div>
+                    <div class="credits">
+                        Designed by <a href="https://bootstrapmade.com/">Kaushtup Bista</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="~/house-js/jquery.min.js"></script>
+    <script src="~/house-js/bootstrap.js"></script>
+    <script src="~/house-js/bootstrap.bundle.min.js"></script>
+    <script src="~/house-js/jquery.easing.min.js"></script>
+    <script src="~/house-js/validate.js"></script>
+    <script src="~/house-js/owl.carousel.min.js"></script>
+    <script src="~/house-js/scrollreveal.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="~/house-js/main.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
