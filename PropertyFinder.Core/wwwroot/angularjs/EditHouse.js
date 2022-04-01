@@ -35,8 +35,6 @@ app.controller("myCtrl", function ($scope, $http, $filter)
         };
 
         reader.readAsDataURL(ee.target.files[0]);
-
-        console.log("rrr", $scope.originalImageData);
     };
 
     $scope.successMessage = "";
@@ -131,8 +129,6 @@ app.controller("myCtrl", function ($scope, $http, $filter)
 
             $scope.originalImageData.splice(keyVal, 1);
         }
-
-        console.log("data", $scope.originalImageData);
     };
 
     $scope.InsertData = function ()
@@ -166,9 +162,6 @@ app.controller("myCtrl", function ($scope, $http, $filter)
                 })
             }
         })
-
-        console.log("ImageData", $scope.ImageData);
-        console.log("DefaultImageData", $scope.DefaultImageData);
 
         var data = new FormData();
 

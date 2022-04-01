@@ -102,5 +102,24 @@ namespace PropertyFinder.Helper
                 return false;
             }
         }
+
+
+        public bool DeleteMessageById(int id)
+        {
+            if (id < 1)
+            {
+                return false;
+            }
+            try
+            {
+                new Repository<Message>(_context).RemoveById(id);
+                
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }

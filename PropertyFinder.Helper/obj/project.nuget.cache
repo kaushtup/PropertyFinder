@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WkZNUreXsvv5uM/0PYcglO1e3GiSBbKfULvAiOLcUmgBiAtzQsl1SfY+BTAAUi1sQcSHsyj/VuLH7jPhxjFbEw==",
+  "dgSpecHash": "2Bi7kmoRfFUtU8NIpbSIgIhydh/ze+utOsbLONpTNX8WuGEmE2Br6kyM5vb8ItVj0I01E9scVv6WyD+T24Ik7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Helper\\PropertyFinder.Helper.csproj",
+  "projectFilePath": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Helper\\PropertyFinder.Helper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaushtup Bista\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\Kaushtup Bista\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",

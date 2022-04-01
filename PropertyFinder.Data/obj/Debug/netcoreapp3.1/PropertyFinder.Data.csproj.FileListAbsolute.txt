@@ -25,3 +25,13 @@ C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debu
 C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csproj.CoreCompileInputs.cache
 C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.dll
 C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.deps.json
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csproj.AssemblyReference.cache
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfoInputs.cache
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.AssemblyInfo.cs
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.csproj.CoreCompileInputs.cache
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Data\obj\Debug\netcoreapp3.1\PropertyFinder.Data.pdb

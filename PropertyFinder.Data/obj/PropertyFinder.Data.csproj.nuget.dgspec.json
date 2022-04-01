@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj": {}
+    "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj": {
+    "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj",
         "projectName": "PropertyFinder.Data",
-        "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj",
+        "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj",
         "packagesPath": "C:\\Users\\Kaushtup Bista\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Data\\obj\\",
+        "outputPath": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kaushtup Bista\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

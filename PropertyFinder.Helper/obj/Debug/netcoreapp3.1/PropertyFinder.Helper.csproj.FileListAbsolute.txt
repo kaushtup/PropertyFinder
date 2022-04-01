@@ -34,3 +34,16 @@ C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\De
 C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CopyComplete
 C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
 C:\Users\Kaushtup Bista\Desktop\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.deps.json
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.dll
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\bin\Debug\netcoreapp3.1\PropertyFinder.Data.pdb
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.AssemblyReference.cache
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfoInputs.cache
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.AssemblyInfo.cs
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CoreCompileInputs.cache
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.csproj.CopyComplete
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.dll
+C:\Users\Kaushtup Bista\Desktop\my projects\masters project\PropertyFinder.Core\PropertyFinder.Helper\obj\Debug\netcoreapp3.1\PropertyFinder.Helper.pdb

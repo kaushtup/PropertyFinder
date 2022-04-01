@@ -10,6 +10,7 @@ using PropertyFinder.Helper;
 namespace PropertyFinder.Core.Controllers
 {
     public class LoginController : Controller
+
     {
         private readonly IDbHelper _dbHelper;
 

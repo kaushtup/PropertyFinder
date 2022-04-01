@@ -31,12 +31,17 @@
     </section><!-- End Intro Single-->
     <!-- ======= Property Grid ======= -->
     <section class="property-grid grid">
+        @{
+            int i = 0;
+            int j = 0;
+            int k = 0;
+        }
         <div class="container my-4">
             <!--Carousel Wrapper-->
             <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
                 <!--Indicators-->
                 <ol class="carousel-indicators" style="margin:0px 0px 20px 220px">
-                    @{ int i = 0, j = 0, k = 0; }
+
                     @foreach (var item in Model.Photo)
                     {
                         if (i == 0)
@@ -64,7 +69,8 @@
                                     <div class="mask rgba-black-light"></div>
                                 </div>
 
-                            </div> }
+                            </div>
+                        }
                         else
                         {
                             <div class="carousel-item">
@@ -73,10 +79,11 @@
                                     <div class="mask rgba-black-light"></div>
                                 </div>
                                 @*<div class="carousel-caption">
-                                <h3 class="h3-responsive">Light mask</h3>
-                                <p>First text</p>
-                            </div>*@
-                            </div>}
+                                    <h3 class="h3-responsive">Light mask</h3>
+                                    <p>First text</p>
+                                </div>*@
+                            </div>
+                        }
 
                         j++;
                     }
@@ -176,7 +183,7 @@
             <br />
             <br />
         </div>
-            
+
     </section>
     <!-- End Property Grid Single-->
 

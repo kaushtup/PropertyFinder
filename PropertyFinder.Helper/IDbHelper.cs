@@ -103,6 +103,8 @@ namespace PropertyFinder.Helper
         Task<List<Message>> GetMessageByTenantIdAsync(int tenantid);
 
         bool UpdateMessageByTenantIdAsync(int id);
+
+        bool DeleteMessageById(int id);
         #endregion
     }
 }

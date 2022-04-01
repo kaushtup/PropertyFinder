@@ -43,6 +43,7 @@ namespace PropertyFinder.Core.Areas.Owner.Controllers
 
             ViewData["UserName"] = userdata.Result.Firstname;
 
+
             return View();
         }
 
@@ -130,8 +131,7 @@ namespace PropertyFinder.Core.Areas.Owner.Controllers
                     return Json("Select Image. Image is mandatory");
                 }
             }
-
-            
+ 
 
             var id = "";
             var title = "";
@@ -197,14 +197,15 @@ namespace PropertyFinder.Core.Areas.Owner.Controllers
                         {
                             var photo = _helper.GetPhotoByNameAsync(item.Key);
 
-                            var delHousePhoto = _helper.DeleteHousePhotoByPhotoId(photo.Id);
-                            var delPhoto = _helper.DeletePhotoById(photo.Id);
+                            var delHousePhoto =  _helper.DeleteHousePhotoByPhotoId(photo.Id);
+                            var delPhoto =  _helper.DeletePhotoById(photo.Id);
 
-                            string _imageToBeDeleted = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", item.Key);
-                            if ((System.IO.File.Exists(_imageToBeDeleted)))
-                            {
-                                System.IO.File.Delete(_imageToBeDeleted);
-                            }
+                            string _imageToBeDeleted =  Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", item.Key);
+                            //if ((System.IO.File.Exists(_imageToBeDeleted)))
+                            //{
+                                
+                            //    System.IO.File.Delete(_imageToBeDeleted);
+                            //}
                         }
                     }
                 }
@@ -232,14 +233,19 @@ namespace PropertyFinder.Core.Areas.Owner.Controllers
                 model.HouseTypeId = Convert.ToInt32(housetypeid);
                 model.PhotoInfo = new List<string>();
 
+                //int i = 0;
                 //new here
                 foreach (var item in image)
                 {
+
+
                     var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", item.Name);
                     var stream = new FileStream(path, FileMode.Create);
 
-                    await image[0].CopyToAsync(stream);
+                    await item.CopyToAsync(stream);
                     model.PhotoInfo.Add(item.FileName);
+
+                    //i++; 
                 }
 
                 //edit to database and add image to database
@@ -250,7 +256,7 @@ namespace PropertyFinder.Core.Areas.Owner.Controllers
                 return Json("Failure:",e);
             }
 
-            return Json("Successl Saved");
+            return Json("Successly Saved");
         }
 
         [HttpPost]

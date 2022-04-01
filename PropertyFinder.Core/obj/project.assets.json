@@ -5562,11 +5562,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Core\\PropertyFinder.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Core\\PropertyFinder.Core.csproj",
       "projectName": "PropertyFinder.Core",
-      "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Core\\PropertyFinder.Core.csproj",
+      "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Core\\PropertyFinder.Core.csproj",
       "packagesPath": "C:\\Users\\Kaushtup Bista\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Core\\obj\\",
+      "outputPath": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kaushtup Bista\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5583,11 +5583,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj": {
-              "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj"
+            "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj": {
+              "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Data\\PropertyFinder.Data.csproj"
             },
-            "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Helper\\PropertyFinder.Helper.csproj": {
-              "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\PropertyFinder.Core\\PropertyFinder.Helper\\PropertyFinder.Helper.csproj"
+            "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Helper\\PropertyFinder.Helper.csproj": {
+              "projectPath": "C:\\Users\\Kaushtup Bista\\Desktop\\my projects\\masters project\\PropertyFinder.Core\\PropertyFinder.Helper\\PropertyFinder.Helper.csproj"
             }
           }
         }
@@ -5645,7 +5645,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

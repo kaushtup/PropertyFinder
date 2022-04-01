@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PropertyFinder.Data.ViewModel;
@@ -18,11 +19,13 @@ namespace PropertyFinder.Core.Areas.Admin.Controllers
     {
         private readonly IDbHelper _helper;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public HomeController(IDbHelper helper, IHttpContextAccessor httpContextAccessor)
+        public HomeController(IDbHelper helper, IHttpContextAccessor httpContextAccessor, IWebHostEnvironment webHostEnvironment)
         {
             _helper = helper;
             _httpContextAccessor = httpContextAccessor;
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
@@ -64,13 +67,14 @@ namespace PropertyFinder.Core.Areas.Admin.Controllers
 
             foreach (var item in data)
             {
-                var deletePhoto =  _helper.DeleteHousePhotoByHouseIdAsync(item.Id);
                 var houseData = await _helper.GetPhotoByHouseIdAsync(item.Id);
+                _helper.DeleteHousePhotoByHouseIdAsync(item.Id);
+                
 
                 foreach (var houseItem in houseData)
                 {
-                    var del = _helper.DeletePhotoById(houseItem.PhotoId);
-
+                  
+                     _helper.DeletePhotoById(houseItem.PhotoId);
                     var photo = _helper.GetPhotoByIdAsync(houseItem.PhotoId);
 
                     string _imageToBeDeleted = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", photo.Image);
@@ -84,7 +88,51 @@ namespace PropertyFinder.Core.Areas.Admin.Controllers
                 var deleteHouseInfo = _helper.DeleteHouseInfoById(item.Id);
             }
 
+          
+            
+            var messageData = await _helper.GetMessageByOwnerIdAsync(Id);
+
+            foreach (var item in messageData)
+            {
+                _helper.DeleteMessageById(item.Id);
+            }
+
             var t =  _helper.DeleteUserById(Id);
+
+
+
+            //var provider = new PhysicalFileProvider(webHostEnvironment.WebRootPath);
+            //var contents = provider.GetDirectoryContents(Path.Combine("images"));
+
+
+            //var photos = await _helper.GetPhotoInfo();
+            //bool stat = true;
+            //foreach (var item in contents)
+            //{
+            //    stat = false;
+            //    foreach (var items in photos)
+            //    {
+            //        if (item.Name == items.Image)
+            //        {
+            //            stat = true;
+            //        }
+            //    }
+
+            //    if (stat == false)
+            //    {
+
+            //        string _imageToBeDeleted = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", item.Name);
+            //        if ((System.IO.File.Exists(_imageToBeDeleted)))
+            //        {
+
+            //            System.IO.File.Delete(_imageToBeDeleted);
+            //        }
+            //    }
+
+            //}
+
+
+
 
             return Json(Id);
         }
@@ -92,12 +140,13 @@ namespace PropertyFinder.Core.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteHouse(int id , int userid)
         {
-            _helper.DeleteHousePhotoByHouseIdAsync(id);
-
             var houseData = await _helper.GetPhotoByHouseIdAsync(id);
+            _helper.DeleteHousePhotoByHouseIdAsync(id);
+          
 
             foreach (var item in houseData)
             {
+                _helper.DeletePhotoById(item.PhotoId);
                 var photo = _helper.GetPhotoByIdAsync(item.PhotoId);
 
                 string _imageToBeDeleted = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", photo.Image);
@@ -106,7 +155,6 @@ namespace PropertyFinder.Core.Areas.Admin.Controllers
                     System.IO.File.Delete(_imageToBeDeleted);
                 }
 
-                _helper.DeletePhotoById(item.PhotoId);
             }
 
             var deleteFavourite = _helper.DeleteFavouritesByHouseInfoIdAsync(id);
@@ -124,6 +172,15 @@ namespace PropertyFinder.Core.Areas.Admin.Controllers
             {
                 _helper.DeleteFavouritesById(item.Id);
             }
+
+            var messageData = await _helper.GetMessageByTenantIdAsync(Id);
+
+
+            foreach (var item in messageData)
+            {
+                _helper.DeleteMessageById(item.Id);
+            }
+
 
             var t = _helper.DeleteUserById(Id);
 

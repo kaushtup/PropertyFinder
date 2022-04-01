@@ -10,7 +10,7 @@ using PropertyFinder.Core.Data;
 namespace PropertyFinder.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210512190501_InitialMigration")]
+    [Migration("20210617033902_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
